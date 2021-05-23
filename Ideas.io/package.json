@@ -1,0 +1,22 @@
+{
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.3.0",
+    "tailwindcss": "^2.1.2"
+  },
+  "dependencies": {
+    "postcss-cli": "^8.3.1",
+    "postcss-import": "^14.0.2"
+  },
+  "name": "ideas.io",
+  "version": "1.0.0",
+  "main": "postcss.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "postcss css/style.css -o build/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
