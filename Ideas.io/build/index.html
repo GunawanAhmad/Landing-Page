@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
+    <script defer src="./script.js"></script>
   </head>
   <body class="font-sans bg-cs-white px-4">
     <div class="container max-w-7xl m-auto min-h-screen">
@@ -31,6 +32,7 @@
             </a>
           </div>
           <ul
+          id="ul-list"
             class="
               h-screen
               absolute
@@ -51,6 +53,7 @@
               sm:m-0
               sm:h-auto
             "
+            class=
           >
             <li class="">
               <a href="#">Discover</a>
@@ -61,6 +64,7 @@
             <li class="">
               <a href="#pricing">Pricing</a>
             </li>
+            <img src="../img/cross.svg" alt="" class="absolute cursor-pointer top-8 right-4 sm:hidden" id="close-btn">
           </ul>
 
           <a
@@ -83,7 +87,7 @@
             >Join</a
           >
           <button class="cursor-pointer sm:hidden">
-            <img src="../img/menu-hamburger.svg" alt="" />
+            <img src="../img/menu-hamburger.svg" alt="" id="hamburger"/>
           </button>
         </nav>
         <div class="flex sm:mt-auto h-4/5 justify-between items-center mt-0">
@@ -135,10 +139,13 @@
               left-2/4
               transform
               -translate-x-1/2
-              top-1/2
-              -translate-y-1/3
+              top-1/4
+              -z-10
               w-7/12
               hidden
+              sm:block
+              sm:translate-y-2/4
+              lg:translate-y-0
             "
           />
         </div>

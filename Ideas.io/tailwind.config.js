@@ -14,6 +14,9 @@ module.exports = {
       width: {
         30: "35%",
       },
+      zIndex: {
+        "-10": "-10",
+      },
     },
     fontFamily: {
       sans: ["Poppins ", "sans-serif"],
