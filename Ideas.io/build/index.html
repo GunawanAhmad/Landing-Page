@@ -12,10 +12,10 @@
     />
     <script defer src="./script.js"></script>
   </head>
-  <body class="font-sans bg-cs-white px-4 smo">
-    <div class="container max-w-7xl m-auto min-h-screen relative">
+  <body class="font-sans bg-cs-white my-0">
+    <div class="container max-w-7xl m-auto min-h-screen relative px-4">
       
-      <section id="home" class="h-screen">
+      <section id="home" class="h-screen relative">
         <nav
           class="
             flex
@@ -146,7 +146,7 @@
               hidden
               sm:block
               sm:translate-y-2/4
-              lg:translate-y-0
+              lg:translate-y-8
             "
           />
         </div>
@@ -188,7 +188,7 @@
       <section id="pricing" class="m-0 py-20 relative">
         <h1 class="text-2xl font-bold text-center sm:text-5xl mb-16">Ready to start with ideas.io?</h1>
         <div class="w-full flex flex-row py-8 sm:flex flex-wrap justify-center  items-center gap-8">
-          <div class="w-full max-w-xs bg-white rounded-2xl px-6 py-12 sm:w-80">
+          <div class="w-full max-w-xs bg-white rounded-2xl px-6 py-12 shadow sm:w-80">
             <h3 class="text-lg font-medium">Forever free</h3>
             <p class="text-tiny">For the basics</p>
             <h3 class="text-2xl font-bold mt-8">0$</h3>
@@ -200,7 +200,7 @@
             </ul>
           </div>
           
-            <div class="w-full bg-cs-blue rounded-2xl px-6 py-12 text-cs-white max-w-xs sm:w-80">
+            <div class="w-full bg-cs-blue rounded-2xl px-6 py-12 text-cs-white max-w-xs shadow sm:w-80">
               <h3 class="text-lg font-medium">Essentials</h3>
               <p class="text-tiny">For small teams</p>
               <h3 class="text-2xl font-bold mt-8">40$</h3>
@@ -212,7 +212,7 @@
               </ul>
             </div>
           
-          <div class="w-full bg-white rounded-2xl px-6 py-12 max-w-xs sm:w-80">
+          <div class="w-full bg-white rounded-2xl px-6 py-12 max-w-xs shadow sm:w-80">
             <h3 class="text-lg font-medium">Professional</h3>
             <p class="text-tiny">For the bigger teams</p>
             <h3 class="text-2xl font-bold mt-8">100$</h3>
@@ -225,6 +225,46 @@
           </div>
         </div>
       </section>
+
     </div>
+    <footer class="bg-cs-black w-full py-12 ">
+      <div class="px-4 m-auto max-w-7xl sm:flex justify-between">
+        <div class="mb-8">
+          <img src="../img/Ideas.io2.svg" alt="" class="fill-current text-red-500">
+          <div class="flex my-4 -ml-1">
+            <a href="">
+              <img src="../img/Facebook.svg" alt="" >
+            </a>
+            <a href="">
+              <img src="../img/Twitter.svg" alt="" class="mx-2">
+            </a>
+            <a href="">
+              <img src="../img/Instagram.svg" alt="">
+            </a>
+          </div>
+          <p class="font text-cs-white opacity-50 font-light text-sm">Copyright 	&#169; 2021 Ideas.io</p>
+        </div>
+        <div class="text-cs-white mb-8">
+          <h2 class="text-2xl font-bold mb-2">Support</h2>
+          <p class="tex text-base">Contact us</p>
+          <p class="tex text-base">FAQ</p>
+          <p class="tex text-base">Downloads</p>
+        </div>
+        <div class="text-cs-white mb-8">
+          <h2 class="text-2xl font-bold mb-2">Legal</h2>
+          <p class="tex text-base">Terms and Serviece</p>
+          <p class="tex text-base">Privacy Policy</p>
+        </div>
+        <div class="text-cs-white mb-8">
+          <h2 class="te text-2xl font-bold">Join community</h2>
+          <div class="relative w-60 h-12 rounded-3xl overflow-hidden mt-4">
+            <input type="text" class="absolute left-0 w-full h-full text-cs-black pl-4 outline-none font-medium" placeholder="Email">
+            <button class="bg-cs-blue absolute right-0 top-0 bottom-0 rounded-full w-12">
+              <img src="../img/send-2.svg" alt="" class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
