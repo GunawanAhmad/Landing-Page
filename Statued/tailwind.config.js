@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
@@ -14,6 +16,13 @@ module.exports = {
         "@xl": { min: "1024px", max: "1279px" },
         "@2xl": { min: "1280px", max: "1535px" },
       },
+
+      zIndex: {
+        "-10": "-10",
+      },
+    },
+    fontFamily: {
+      sans: ["Poppins", defaultTheme.fontFamily.sans],
     },
   },
   variants: {
