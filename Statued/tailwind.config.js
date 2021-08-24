@@ -20,6 +20,9 @@ module.exports = {
       zIndex: {
         "-10": "-10",
       },
+      width: {
+        "120%": "120%",
+      },
     },
     fontFamily: {
       sans: ["Poppins", defaultTheme.fontFamily.sans],

@@ -19,13 +19,13 @@ function init() {
 
   //Camera setup
   camera = new THREE.PerspectiveCamera(fov, aspect, nearLimit, farLimit);
-  camera.position.set(0, 2.5, 15);
+  camera.position.set(0, 2.5, 9);
 
-  //   const ambient = new THREE.AmbientLight(0xffffff, 1);
-  //   scene.add(ambient);
+  const ambient = new THREE.AmbientLight(0xffffff, 1);
+  scene.add(ambient);
 
-  const light = new THREE.DirectionalLight(0xffffff, 2.5);
-  light.position.set(20, 10, 25);
+  const light = new THREE.DirectionalLight(0xffffff, 1.1);
+  light.position.set(20, 10, 40);
   light.castShadow = true;
   scene.add(light);
 
@@ -40,7 +40,7 @@ function init() {
   loader.load("3d.OBJ", function (obj) {
     obj.traverse(function (ob) {
       if (ob.isMesh) {
-        ob.material.color.set(0x303030);
+        ob.material.color.set(0x505050);
       }
     });
     scene.add(obj);
