@@ -19,9 +19,19 @@ module.exports = {
 
       zIndex: {
         "-10": "-10",
+        99: "99",
       },
       width: {
         "120%": "120%",
+      },
+      cursor: {
+        none: "none",
+      },
+      transformOrigin: {
+        full: "100%",
+      },
+      transitionDelay: {
+        10: "10ms",
       },
     },
     fontFamily: {

@@ -62,6 +62,9 @@ function animate() {
 }
 
 let body = document.querySelector("body");
+let cursorDot = document.querySelector(".cursor-dot");
+let cursorBorder = document.querySelector(".cursor-border");
+
 document.addEventListener("mousemove", (e) => {
   if (e.clientX < body.clientWidth / 2) {
     rotation = -Math.abs(e.clientX - body.clientWidth / 2) / 1000;
@@ -69,6 +72,10 @@ document.addEventListener("mousemove", (e) => {
     rotation = Math.abs(e.clientX - body.clientWidth / 2) / 1000;
   }
   mouseX = e.clientX;
+  cursorDot.style.top = e.pageY + "px";
+  cursorDot.style.left = e.pageX + "px";
+  cursorBorder.style.top = e.pageY + "px";
+  cursorBorder.style.left = e.pageX + "px";
 });
 
 init();
