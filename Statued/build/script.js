@@ -4,7 +4,7 @@ let container,
   camera,
   statue,
   mouseY = 0,
-  mouseX;
+  mouseX = 0;
 
 function init() {
   container = document.querySelector(".scene");
@@ -43,8 +43,8 @@ function init() {
         ob.material.color.set(0x505050);
       }
     });
+
     scene.add(obj);
-    console.log(obj);
     statue = obj.children[0];
     renderer.render(scene, camera);
 
@@ -52,20 +52,21 @@ function init() {
   });
 }
 
-let reduce = false;
+let rotation = 0;
 function animate() {
   requestAnimationFrame(animate);
 
-  statue.rotation.y += -0.0005;
+  statue.rotation.y = rotation;
 
   renderer.render(scene, camera);
 }
 
+let body = document.querySelector("body");
 document.addEventListener("mousemove", (e) => {
-  if (e.clientX > mouseX) {
-    reduce = false;
+  if (e.clientX < body.clientWidth / 2) {
+    rotation = -Math.abs(e.clientX - body.clientWidth / 2) / 1000;
   } else {
-    reduce = true;
+    rotation = Math.abs(e.clientX - body.clientWidth / 2) / 1000;
   }
   mouseX = e.clientX;
 });
