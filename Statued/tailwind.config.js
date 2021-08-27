@@ -33,6 +33,12 @@ module.exports = {
       transitionDelay: {
         10: "10ms",
       },
+      keyframes: {
+        fadeIn: {
+          "0%": { transform: "translateX(100%)", opacity: 0 },
+          "100%": { transform: "translateX(0)", opacity: 1 },
+        },
+      },
     },
     fontFamily: {
       sans: ["Poppins", defaultTheme.fontFamily.sans],

@@ -79,3 +79,13 @@ document.addEventListener("mousemove", (e) => {
 });
 
 init();
+
+const hamburger = document.querySelector(".hamburger");
+const menu = document.querySelector(".menu");
+hamburger.addEventListener("click", (e) => {
+  let lines = hamburger.children;
+  for (let i = 0; i < lines.length; i++) {
+    lines[i].classList.toggle("toggle");
+  }
+  menu.classList.toggle("toggle");
+});
