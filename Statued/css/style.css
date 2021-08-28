@@ -13,6 +13,10 @@
     transform: translateX(0);
   }
 
+  .nav-dot.active {
+    background-color: #1f202c;
+  }
+
   .menu div h1 {
     transform: translateX(100%);
     opacity: 0;

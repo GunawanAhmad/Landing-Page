@@ -39,6 +39,11 @@ module.exports = {
           "100%": { transform: "translateX(0)", opacity: 1 },
         },
       },
+      flexGrow: {
+        1.5: "1.5",
+        2: "2",
+        3: "3",
+      },
     },
     fontFamily: {
       sans: ["Poppins", defaultTheme.fontFamily.sans],

@@ -89,3 +89,34 @@ hamburger.addEventListener("click", (e) => {
   }
   menu.classList.toggle("toggle");
 });
+
+//nav dot
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+const navDot = document.querySelectorAll(".nav-dot");
+navDot[0].classList.add("active");
+let lastActive = 0;
+
+navDot.forEach((elm, i) => {
+  elm.addEventListener("click", () => {
+    navDot[lastActive].classList.remove("active");
+    elm.classList.add("active");
+    lastActive = i;
+  });
+});
+
+prevBtn.addEventListener("click", () => {
+  if (lastActive > 0) {
+    navDot[lastActive].classList.remove("active");
+    lastActive--;
+    navDot[lastActive].classList.add("active");
+  }
+});
+
+nextBtn.addEventListener("click", () => {
+  if (lastActive < 2) {
+    navDot[lastActive].classList.remove("active");
+    lastActive++;
+    navDot[lastActive].classList.add("active");
+  }
+});
