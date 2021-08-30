@@ -1,10 +1,4 @@
-let container,
-  scene,
-  renderer,
-  camera,
-  statue,
-  mouseY = 0,
-  mouseX = 0;
+let container, scene, renderer, camera, statue;
 
 function init() {
   container = document.querySelector(".scene");
@@ -62,8 +56,6 @@ function animate() {
 }
 
 let body = document.querySelector("body");
-let cursorDot = document.querySelector(".cursor-dot");
-let cursorBorder = document.querySelector(".cursor-border");
 
 document.addEventListener("mousemove", (e) => {
   if (e.clientX < body.clientWidth / 2) {
@@ -71,11 +63,6 @@ document.addEventListener("mousemove", (e) => {
   } else {
     rotation = Math.abs(e.clientX - body.clientWidth / 2) / 1000;
   }
-  mouseX = e.clientX;
-  cursorDot.style.top = e.pageY + "px";
-  cursorDot.style.left = e.pageX + "px";
-  cursorBorder.style.top = e.pageY + "px";
-  cursorBorder.style.left = e.pageX + "px";
 });
 
 init();
@@ -105,18 +92,14 @@ navDot.forEach((elm, i) => {
   });
 });
 
-prevBtn.addEventListener("click", () => {
-  if (lastActive > 0) {
-    navDot[lastActive].classList.remove("active");
-    lastActive--;
-    navDot[lastActive].classList.add("active");
-  }
+//handling input search
+const searchInput = document.querySelector(".search-input");
+
+searchInput.addEventListener("focus", () => {
+  searchInput.parentElement.style.width = "256px";
 });
 
-nextBtn.addEventListener("click", () => {
-  if (lastActive < 2) {
-    navDot[lastActive].classList.remove("active");
-    lastActive++;
-    navDot[lastActive].classList.add("active");
-  }
+searchInput.addEventListener("focusout", () => {
+  searchInput.parentElement.style.width = "32px";
+  searchInput.value = "";
 });
