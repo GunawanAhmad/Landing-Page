@@ -65,7 +65,19 @@ document.addEventListener("mousemove", (e) => {
   }
 });
 
+window.addEventListener("resize", resize);
+
 init();
+
+function resize() {
+  const width = container.clientWidth;
+  const height = container.clientHeight;
+
+  camera.aspect = width / height;
+  camera.updateProjectionMatrix();
+
+  renderer.setSize(container.clientWidth, container.clientHeight);
+}
 
 const hamburger = document.querySelector(".hamburger");
 const menu = document.querySelector(".menu");
